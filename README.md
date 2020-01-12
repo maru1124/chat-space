@@ -26,7 +26,7 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 |email|string|null: false|
 |password|string|null: false|
 
