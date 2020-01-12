@@ -51,7 +51,6 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|message_id|references :message|foreign_key: true|
 |user_id|references :user|foreign_key: true|
 
 ### Association
