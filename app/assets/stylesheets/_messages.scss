@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.chat-side {
+  width: 300px;
+  background-color: #253141;
+  height: 100%;
+}
+
+.chat-main {
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+  height: 100%;
+}
+
+.chat-side {
+  list-style: none;
+  &__side-header {
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__side-box {
+      height: 20px;
+      width: 260px;
+      background-color: #333333;
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      &__user-name {
+        font-size: 15px;
+        color: #ffffff
+      }
+      &__menu {
+        display: flex;
+        list-style: none;
+        li {
+          margin-left: 5px;
+        }
+        i {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  &__groups {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 20px ;
+    box-sizing: border-box;
+    .group {
+      color: white;
+      text-decoration: none;
+      margin-bottom: 40px;
+      p.group__group-name {
+        margin-bottom: 5px;
+        font-size: 15px;
+      }
+      p.group__latest-message {
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.chat-main {
+  list-style: none;
+  &__main-header {
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    &__leftbox {
+      padding-top: 35px;
+      padding-left: 40px;
+      p.chat-main__main-header__leftbox__group-name {
+        font-size: 20px;
+        color: #333333;
+        font-weight: bold;
+      }
+      p.chat-main__main-header__leftbox__member-name {
+        font-size: 12px;
+        color: #999999;
+        padding-top: 15px;
+        font-weight: bold;
+      }
+    }
+    &__rightbox {
+      width: 72px;
+      height: 40px;
+      padding-top: 28px;
+      padding-right: 40px;
+      p.chat-main__main-header__rightbox__edit {
+        align-items: center;
+        font-weight: bold;
+        color: #38aef0;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+  &__messages {
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    &__message-box {
+      padding-top: 35px;
+      padding-left: 40px;
+      &__user-name {
+        color: #333333;
+        font-size: 16px;
+        font-weight: bold;
+        align-items: center;
+        display: flex;
+        li {
+          color: #999999;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      &__chat-main__messages__message-box__message {
+        color: #434A54;
+        font-size: 14px;
+        padding-top: 12px;
+      }
+    }
+    &__message-box2 {
+      padding-top: 46px;
+      padding-left: 40px;
+      &__user-name {
+        color: #333333;
+        font-size: 16px;
+        font-weight: bold;
+        align-items: center;
+        display: flex;
+        li {
+          color: #999999;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      &__chat-main__messages__message-box__message {
+        color: #434A54;
+        font-size: 14px;
+        padding-top: 12px;
+      }
+    }
+  }
+  &__form {
+    background-color: #d2d2d2;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    &__new-message {
+      height: 50px;
+      background-color: #fafafa;
+      position: relative;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      
+      &__input-text {
+        color: #999999;
+        position: absolute;
+        top: 30%;
+      }
+      label {
+        position: absolute;
+        top: 30%;
+        right: 10px;
+        font-size: 1.3rem;
+        input {
+          display: none;
+        }
+      }
+    &__submit-btn {
+        width: 100px;
+        height: 50px;
+        background-color:#38aef0;
+        color: white;
+        margin-left: 15px;
+        text-align: center;
+        line-height: 50px;
+      }
+    }
+  }
+}
+
