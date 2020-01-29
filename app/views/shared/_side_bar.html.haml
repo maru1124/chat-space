@@ -6,16 +6,16 @@
           = current_user.name
         %ul.chat-side__side-header__side-box__menu
           %li.chat-side__side-header__side-box__menu__new-group
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
           %li.chat-side__side-header__side-box__menu__edit-user
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
     .chat-side__groups
-      = link_to "#", class:"group" do
-        %p.group__group-name
-          test
-        %p.group__latest-message
-          まだメッセージはありません。
-
-
+      - current_user.groups.each do |group|
+        = link_to "#", class:"group" do
+          %p.group__group-name
+            = group.name
+            test
+          %p.group__latest-message
+            まだメッセージはありません。
