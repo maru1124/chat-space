@@ -60,11 +60,11 @@
       color: white;
       text-decoration: none;
       margin-bottom: 40px;
-      p.group__group-name {
+      p.group__name {
         margin-bottom: 5px;
         font-size: 15px;
       }
-      p.group__latest-message {
+      p.group__message {
         font-size: 11px;
       }
     }
@@ -87,91 +87,87 @@
         color: #333333;
         font-weight: bold;
       }
-      p.chat-main__main-header__leftbox__member-name {
+      ul.chat-main__main-header__leftbox__member {
         font-size: 12px;
         color: #999999;
         padding-top: 15px;
         font-weight: bold;
+        display: flex;
+        li.chat-main__main-header__leftbox__member__member-list {
+          padding-left: 10px;
+        }
       }
     }
     &__rightbox {
-      width: 72px;
+      color: #38aef0;
       height: 40px;
-      padding-top: 28px;
-      padding-right: 40px;
-      p.chat-main__main-header__rightbox__edit {
-        align-items: center;
-        font-weight: bold;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      position: absolute;
+      right: 40px;
+      .Editlink {
+        text-decoration: none;
         color: #38aef0;
-        padding-left: 20px;
-        padding-right: 20px;
       }
     }
   }
   &__messages {
     background-color: #fafafa;
     height: calc(100vh - 190px);
-    &__message-box {
+    &__upper-message {
       padding-top: 35px;
       padding-left: 40px;
+      display: flex;
       &__user-name {
         color: #333333;
         font-size: 16px;
         font-weight: bold;
         align-items: center;
-        display: flex;
-        li {
-          color: #999999;
-          font-size: 12px;
-          padding-left: 10px;
-        }
       }
-      &__chat-main__messages__message-box__message {
-        color: #434A54;
-        font-size: 14px;
-        padding-top: 12px;
+      &__date {
+        color: #999999;
+        font-size: 12px;
+        padding-left: 10px;
       }
     }
-    &__message-box2 {
-      padding-top: 46px;
+    &__lower-message {
+      color: #434A54;
+      font-size: 14px;
+      padding-top: 12px;
       padding-left: 40px;
-      &__user-name {
-        color: #333333;
-        font-size: 16px;
-        font-weight: bold;
-        align-items: center;
-        display: flex;
-        li {
-          color: #999999;
-          font-size: 12px;
-          padding-left: 10px;
-        }
-      }
-      &__chat-main__messages__message-box__message {
-        color: #434A54;
-        font-size: 14px;
-        padding-top: 12px;
-      }
     }
   }
   &__form {
     background-color: #d2d2d2;
     height: 90px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 40px;
-    align-items: center;
-    &__new-message {
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 0 40px;
+    // align-items: center;
+    
+    &__form1{
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      align-items: center;
+    }
+
+    &__message {
       height: 50px;
       background-color: #fafafa;
       position: relative;
       width: 100%;
-      padding: 0 40px 0 10px;
+      //padding: 0 40px 0 10px;
       
       &__input-text {
         color: #999999;
-        position: absolute;
-        top: 30%;
+        //position: absolute;
+        //top: 30%;
+        width: 100%;
+        height: 50px;
+        padding: 0 40px 0 10px;
       }
       label {
         position: absolute;
